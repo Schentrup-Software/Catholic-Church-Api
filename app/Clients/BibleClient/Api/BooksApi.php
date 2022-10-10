@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  App\Clients\BibleClient
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -43,7 +43,7 @@ use App\Clients\BibleClient\ObjectSerializer;
  * BooksApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  App\Clients\BibleClient
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -94,9 +94,9 @@ class BooksApi
      * @param  string $book_id Id of the Book to fetch (required)
      * @param  bool $include_chapters Boolean indicating if an array of chapter summaries should be included in the results. Defaults to false. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \App\Clients\BibleClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse2003
+     * @return \App\Clients\BibleClient\Model\InlineResponse2003
      */
     public function getAudioBook($audio_bible_id, $book_id, $include_chapters = null)
     {
@@ -111,13 +111,13 @@ class BooksApi
      * @param  string $book_id Id of the Book to fetch (required)
      * @param  bool $include_chapters Boolean indicating if an array of chapter summaries should be included in the results. Defaults to false. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \App\Clients\BibleClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse2003, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \App\Clients\BibleClient\Model\InlineResponse2003, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAudioBookWithHttpInfo($audio_bible_id, $book_id, $include_chapters = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse2003';
+        $returnType = '\App\Clients\BibleClient\Model\InlineResponse2003';
         $request = $this->getAudioBookRequest($audio_bible_id, $book_id, $include_chapters);
 
         try {
@@ -169,7 +169,7 @@ class BooksApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse2003',
+                        '\App\Clients\BibleClient\Model\InlineResponse2003',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -215,7 +215,7 @@ class BooksApi
      */
     public function getAudioBookAsyncWithHttpInfo($audio_bible_id, $book_id, $include_chapters = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse2003';
+        $returnType = '\App\Clients\BibleClient\Model\InlineResponse2003';
         $request = $this->getAudioBookRequest($audio_bible_id, $book_id, $include_chapters);
 
         return $this->client
@@ -392,9 +392,9 @@ class BooksApi
      * @param  bool $include_chapters Boolean indicating if an array of chapter summaries should be included in the results. Defaults to false. (optional)
      * @param  bool $include_chapters_and_sections Boolean indicating if an array of chapter summaries and an array of sections should be included in the results. Defaults to false. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \App\Clients\BibleClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse2002
+     * @return \App\Clients\BibleClient\Model\InlineResponse2002
      */
     public function getAudioBooks($audio_bible_id, $include_chapters = null, $include_chapters_and_sections = null)
     {
@@ -409,13 +409,13 @@ class BooksApi
      * @param  bool $include_chapters Boolean indicating if an array of chapter summaries should be included in the results. Defaults to false. (optional)
      * @param  bool $include_chapters_and_sections Boolean indicating if an array of chapter summaries and an array of sections should be included in the results. Defaults to false. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \App\Clients\BibleClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse2002, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \App\Clients\BibleClient\Model\InlineResponse2002, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAudioBooksWithHttpInfo($audio_bible_id, $include_chapters = null, $include_chapters_and_sections = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse2002';
+        $returnType = '\App\Clients\BibleClient\Model\InlineResponse2002';
         $request = $this->getAudioBooksRequest($audio_bible_id, $include_chapters, $include_chapters_and_sections);
 
         try {
@@ -467,7 +467,7 @@ class BooksApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse2002',
+                        '\App\Clients\BibleClient\Model\InlineResponse2002',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -513,7 +513,7 @@ class BooksApi
      */
     public function getAudioBooksAsyncWithHttpInfo($audio_bible_id, $include_chapters = null, $include_chapters_and_sections = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse2002';
+        $returnType = '\App\Clients\BibleClient\Model\InlineResponse2002';
         $request = $this->getAudioBooksRequest($audio_bible_id, $include_chapters, $include_chapters_and_sections);
 
         return $this->client
@@ -680,9 +680,9 @@ class BooksApi
      * @param  string $book_id Id of the Book to fetch (required)
      * @param  bool $include_chapters Boolean indicating if an array of chapter summaries should be included in the results. Defaults to false. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \App\Clients\BibleClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse2003
+     * @return \App\Clients\BibleClient\Model\InlineResponse2003
      */
     public function getBook($bible_id, $book_id, $include_chapters = null)
     {
@@ -697,13 +697,13 @@ class BooksApi
      * @param  string $book_id Id of the Book to fetch (required)
      * @param  bool $include_chapters Boolean indicating if an array of chapter summaries should be included in the results. Defaults to false. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \App\Clients\BibleClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse2003, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \App\Clients\BibleClient\Model\InlineResponse2003, HTTP status code, HTTP response headers (array of strings)
      */
     public function getBookWithHttpInfo($bible_id, $book_id, $include_chapters = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse2003';
+        $returnType = '\App\Clients\BibleClient\Model\InlineResponse2003';
         $request = $this->getBookRequest($bible_id, $book_id, $include_chapters);
 
         try {
@@ -755,7 +755,7 @@ class BooksApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse2003',
+                        '\App\Clients\BibleClient\Model\InlineResponse2003',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -801,7 +801,7 @@ class BooksApi
      */
     public function getBookAsyncWithHttpInfo($bible_id, $book_id, $include_chapters = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse2003';
+        $returnType = '\App\Clients\BibleClient\Model\InlineResponse2003';
         $request = $this->getBookRequest($bible_id, $book_id, $include_chapters);
 
         return $this->client
@@ -978,9 +978,9 @@ class BooksApi
      * @param  bool $include_chapters Boolean indicating if an array of chapter summaries should be included in the results. Defaults to false. (optional)
      * @param  bool $include_chapters_and_sections Boolean indicating if an array of chapter summaries and an array of sections should be included in the results. Defaults to false. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \App\Clients\BibleClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse2002
+     * @return \App\Clients\BibleClient\Model\InlineResponse2002
      */
     public function getBooks($bible_id, $include_chapters = null, $include_chapters_and_sections = null)
     {
@@ -995,13 +995,13 @@ class BooksApi
      * @param  bool $include_chapters Boolean indicating if an array of chapter summaries should be included in the results. Defaults to false. (optional)
      * @param  bool $include_chapters_and_sections Boolean indicating if an array of chapter summaries and an array of sections should be included in the results. Defaults to false. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \App\Clients\BibleClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse2002, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \App\Clients\BibleClient\Model\InlineResponse2002, HTTP status code, HTTP response headers (array of strings)
      */
     public function getBooksWithHttpInfo($bible_id, $include_chapters = null, $include_chapters_and_sections = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse2002';
+        $returnType = '\App\Clients\BibleClient\Model\InlineResponse2002';
         $request = $this->getBooksRequest($bible_id, $include_chapters, $include_chapters_and_sections);
 
         try {
@@ -1053,7 +1053,7 @@ class BooksApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse2002',
+                        '\App\Clients\BibleClient\Model\InlineResponse2002',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1099,7 +1099,7 @@ class BooksApi
      */
     public function getBooksAsyncWithHttpInfo($bible_id, $include_chapters = null, $include_chapters_and_sections = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse2002';
+        $returnType = '\App\Clients\BibleClient\Model\InlineResponse2002';
         $request = $this->getBooksRequest($bible_id, $include_chapters, $include_chapters_and_sections);
 
         return $this->client

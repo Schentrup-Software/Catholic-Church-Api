@@ -1,6 +1,7 @@
 <?php
 
 use App\Clients\BibleClient\Api\BiblesApi;
+use App\Clients\BibleClient\Configuration;
 
 require_once __DIR__.'/../vendor/autoload.php';
 
@@ -53,7 +54,12 @@ $app->singleton(
 $app->singleton(
     App\Clients\BibleClient\Api\BiblesApi::class,
     function ($app) {
-        return new BiblesApi();
+        $config = new Configuration();
+        $config->setApiKey("api-key", env("BIBLE_API_KEY"));
+
+        return new BiblesApi(
+            config: $config
+        );
     }
 );
 

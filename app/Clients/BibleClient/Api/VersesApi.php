@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  App\Clients\BibleClient
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -43,7 +43,7 @@ use App\Clients\BibleClient\ObjectSerializer;
  * VersesApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  App\Clients\BibleClient
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -101,9 +101,9 @@ class VersesApi
      * @param  string $parallels Comma delimited list of bibleIds to include (optional)
      * @param  bool $use_org_id Use the supplied id(s) to match the verseOrgId instead of the verseId (optional, default to false)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \App\Clients\BibleClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse20010
+     * @return \App\Clients\BibleClient\Model\InlineResponse20010
      */
     public function getVerse($bible_id, $verse_id, $content_type = 'html', $include_notes = 'false', $include_titles = 'true', $include_chapter_numbers = 'false', $include_verse_numbers = 'true', $include_verse_spans = 'false', $parallels = null, $use_org_id = 'false')
     {
@@ -125,13 +125,13 @@ class VersesApi
      * @param  string $parallels Comma delimited list of bibleIds to include (optional)
      * @param  bool $use_org_id Use the supplied id(s) to match the verseOrgId instead of the verseId (optional, default to false)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \App\Clients\BibleClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse20010, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \App\Clients\BibleClient\Model\InlineResponse20010, HTTP status code, HTTP response headers (array of strings)
      */
     public function getVerseWithHttpInfo($bible_id, $verse_id, $content_type = 'html', $include_notes = 'false', $include_titles = 'true', $include_chapter_numbers = 'false', $include_verse_numbers = 'true', $include_verse_spans = 'false', $parallels = null, $use_org_id = 'false')
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20010';
+        $returnType = '\App\Clients\BibleClient\Model\InlineResponse20010';
         $request = $this->getVerseRequest($bible_id, $verse_id, $content_type, $include_notes, $include_titles, $include_chapter_numbers, $include_verse_numbers, $include_verse_spans, $parallels, $use_org_id);
 
         try {
@@ -183,7 +183,7 @@ class VersesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse20010',
+                        '\App\Clients\BibleClient\Model\InlineResponse20010',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -243,7 +243,7 @@ class VersesApi
      */
     public function getVerseAsyncWithHttpInfo($bible_id, $verse_id, $content_type = 'html', $include_notes = 'false', $include_titles = 'true', $include_chapter_numbers = 'false', $include_verse_numbers = 'true', $include_verse_spans = 'false', $parallels = null, $use_org_id = 'false')
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20010';
+        $returnType = '\App\Clients\BibleClient\Model\InlineResponse20010';
         $request = $this->getVerseRequest($bible_id, $verse_id, $content_type, $include_notes, $include_titles, $include_chapter_numbers, $include_verse_numbers, $include_verse_spans, $parallels, $use_org_id);
 
         return $this->client
@@ -454,9 +454,9 @@ class VersesApi
      * @param  string $bible_id Id of Bible whose Verses to fetch (required)
      * @param  string $chapter_id Id of the Chapter whose Verses to fetch (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \App\Clients\BibleClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse2009
+     * @return \App\Clients\BibleClient\Model\InlineResponse2009
      */
     public function getVerses($bible_id, $chapter_id)
     {
@@ -470,13 +470,13 @@ class VersesApi
      * @param  string $bible_id Id of Bible whose Verses to fetch (required)
      * @param  string $chapter_id Id of the Chapter whose Verses to fetch (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \App\Clients\BibleClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse2009, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \App\Clients\BibleClient\Model\InlineResponse2009, HTTP status code, HTTP response headers (array of strings)
      */
     public function getVersesWithHttpInfo($bible_id, $chapter_id)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse2009';
+        $returnType = '\App\Clients\BibleClient\Model\InlineResponse2009';
         $request = $this->getVersesRequest($bible_id, $chapter_id);
 
         try {
@@ -528,7 +528,7 @@ class VersesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse2009',
+                        '\App\Clients\BibleClient\Model\InlineResponse2009',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -572,7 +572,7 @@ class VersesApi
      */
     public function getVersesAsyncWithHttpInfo($bible_id, $chapter_id)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse2009';
+        $returnType = '\App\Clients\BibleClient\Model\InlineResponse2009';
         $request = $this->getVersesRequest($bible_id, $chapter_id);
 
         return $this->client

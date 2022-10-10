@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  App\Clients\BibleClient
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -43,7 +43,7 @@ use App\Clients\BibleClient\ObjectSerializer;
  * SearchApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  App\Clients\BibleClient
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -98,9 +98,9 @@ class SearchApi
      * @param  string $range One or more, comma seperated, passage ids (book, chapter, verse) which the search will be limited to.  (i.e. gen.1,gen.5 or gen-num or gen.1.1-gen.3.5) (optional)
      * @param  string $fuzziness Sets the fuzziness of a search to account for misspellings. Values can be 0, 1, 2, or AUTO. Defaults to AUTO which varies depending on the (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \App\Clients\BibleClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse20011
+     * @return \App\Clients\BibleClient\Model\InlineResponse20011
      */
     public function searchBible($bible_id, $query = null, $limit = null, $offset = null, $sort = 'relevance', $range = null, $fuzziness = null)
     {
@@ -119,13 +119,13 @@ class SearchApi
      * @param  string $range One or more, comma seperated, passage ids (book, chapter, verse) which the search will be limited to.  (i.e. gen.1,gen.5 or gen-num or gen.1.1-gen.3.5) (optional)
      * @param  string $fuzziness Sets the fuzziness of a search to account for misspellings. Values can be 0, 1, 2, or AUTO. Defaults to AUTO which varies depending on the (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \App\Clients\BibleClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse20011, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \App\Clients\BibleClient\Model\InlineResponse20011, HTTP status code, HTTP response headers (array of strings)
      */
     public function searchBibleWithHttpInfo($bible_id, $query = null, $limit = null, $offset = null, $sort = 'relevance', $range = null, $fuzziness = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20011';
+        $returnType = '\App\Clients\BibleClient\Model\InlineResponse20011';
         $request = $this->searchBibleRequest($bible_id, $query, $limit, $offset, $sort, $range, $fuzziness);
 
         try {
@@ -177,7 +177,7 @@ class SearchApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse20011',
+                        '\App\Clients\BibleClient\Model\InlineResponse20011',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -231,7 +231,7 @@ class SearchApi
      */
     public function searchBibleAsyncWithHttpInfo($bible_id, $query = null, $limit = null, $offset = null, $sort = 'relevance', $range = null, $fuzziness = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20011';
+        $returnType = '\App\Clients\BibleClient\Model\InlineResponse20011';
         $request = $this->searchBibleRequest($bible_id, $query, $limit, $offset, $sort, $range, $fuzziness);
 
         return $this->client

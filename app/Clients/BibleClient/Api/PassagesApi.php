@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  App\Clients\BibleClient
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -43,7 +43,7 @@ use App\Clients\BibleClient\ObjectSerializer;
  * PassagesApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  App\Clients\BibleClient
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -101,9 +101,9 @@ class PassagesApi
      * @param  string $parallels Comma delimited list of bibleIds to include (optional)
      * @param  bool $use_org_id Use the supplied id(s) to match the verseOrgId instead of the verseId (optional, default to false)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \App\Clients\BibleClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse2006
+     * @return \App\Clients\BibleClient\Model\InlineResponse2006
      */
     public function getPassage($bible_id, $passage_id, $content_type = 'html', $include_notes = 'false', $include_titles = 'true', $include_chapter_numbers = 'false', $include_verse_numbers = 'true', $include_verse_spans = 'false', $parallels = null, $use_org_id = 'false')
     {
@@ -125,13 +125,13 @@ class PassagesApi
      * @param  string $parallels Comma delimited list of bibleIds to include (optional)
      * @param  bool $use_org_id Use the supplied id(s) to match the verseOrgId instead of the verseId (optional, default to false)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \App\Clients\BibleClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse2006, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \App\Clients\BibleClient\Model\InlineResponse2006, HTTP status code, HTTP response headers (array of strings)
      */
     public function getPassageWithHttpInfo($bible_id, $passage_id, $content_type = 'html', $include_notes = 'false', $include_titles = 'true', $include_chapter_numbers = 'false', $include_verse_numbers = 'true', $include_verse_spans = 'false', $parallels = null, $use_org_id = 'false')
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse2006';
+        $returnType = '\App\Clients\BibleClient\Model\InlineResponse2006';
         $request = $this->getPassageRequest($bible_id, $passage_id, $content_type, $include_notes, $include_titles, $include_chapter_numbers, $include_verse_numbers, $include_verse_spans, $parallels, $use_org_id);
 
         try {
@@ -183,7 +183,7 @@ class PassagesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse2006',
+                        '\App\Clients\BibleClient\Model\InlineResponse2006',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -243,7 +243,7 @@ class PassagesApi
      */
     public function getPassageAsyncWithHttpInfo($bible_id, $passage_id, $content_type = 'html', $include_notes = 'false', $include_titles = 'true', $include_chapter_numbers = 'false', $include_verse_numbers = 'true', $include_verse_spans = 'false', $parallels = null, $use_org_id = 'false')
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse2006';
+        $returnType = '\App\Clients\BibleClient\Model\InlineResponse2006';
         $request = $this->getPassageRequest($bible_id, $passage_id, $content_type, $include_notes, $include_titles, $include_chapter_numbers, $include_verse_numbers, $include_verse_spans, $parallels, $use_org_id);
 
         return $this->client

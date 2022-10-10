@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  App\Clients\BibleClient
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -43,7 +43,7 @@ use App\Clients\BibleClient\ObjectSerializer;
  * BiblesApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  App\Clients\BibleClient
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -92,9 +92,9 @@ class BiblesApi
      *
      * @param  string $audio_bible_id Id of audio Bible to be fetched (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \App\Clients\BibleClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse20012
+     * @return \App\Clients\BibleClient\Model\InlineResponse20012
      */
     public function getAudioBible($audio_bible_id)
     {
@@ -107,13 +107,13 @@ class BiblesApi
      *
      * @param  string $audio_bible_id Id of audio Bible to be fetched (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \App\Clients\BibleClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse20012, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \App\Clients\BibleClient\Model\InlineResponse20012, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAudioBibleWithHttpInfo($audio_bible_id)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20012';
+        $returnType = '\App\Clients\BibleClient\Model\InlineResponse20012';
         $request = $this->getAudioBibleRequest($audio_bible_id);
 
         try {
@@ -165,7 +165,7 @@ class BiblesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse20012',
+                        '\App\Clients\BibleClient\Model\InlineResponse20012',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -207,7 +207,7 @@ class BiblesApi
      */
     public function getAudioBibleAsyncWithHttpInfo($audio_bible_id)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20012';
+        $returnType = '\App\Clients\BibleClient\Model\InlineResponse20012';
         $request = $this->getAudioBibleRequest($audio_bible_id);
 
         return $this->client
@@ -367,9 +367,9 @@ class BiblesApi
      * @param  string $bible_id bibleId of related text Bible used to filter audio bible results (optional)
      * @param  bool $include_full_details Boolean to include full Bible details (e.g. copyright and promo info) (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \App\Clients\BibleClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse200
+     * @return \App\Clients\BibleClient\Model\InlineResponse200
      */
     public function getAudioBibles($language = null, $abbreviation = null, $name = null, $ids = null, $bible_id = null, $include_full_details = null)
     {
@@ -387,13 +387,13 @@ class BiblesApi
      * @param  string $bible_id bibleId of related text Bible used to filter audio bible results (optional)
      * @param  bool $include_full_details Boolean to include full Bible details (e.g. copyright and promo info) (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \App\Clients\BibleClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse200, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \App\Clients\BibleClient\Model\InlineResponse200, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAudioBiblesWithHttpInfo($language = null, $abbreviation = null, $name = null, $ids = null, $bible_id = null, $include_full_details = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse200';
+        $returnType = '\App\Clients\BibleClient\Model\InlineResponse200';
         $request = $this->getAudioBiblesRequest($language, $abbreviation, $name, $ids, $bible_id, $include_full_details);
 
         try {
@@ -445,7 +445,7 @@ class BiblesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse200',
+                        '\App\Clients\BibleClient\Model\InlineResponse200',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -497,7 +497,7 @@ class BiblesApi
      */
     public function getAudioBiblesAsyncWithHttpInfo($language = null, $abbreviation = null, $name = null, $ids = null, $bible_id = null, $include_full_details = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse200';
+        $returnType = '\App\Clients\BibleClient\Model\InlineResponse200';
         $request = $this->getAudioBiblesRequest($language, $abbreviation, $name, $ids, $bible_id, $include_full_details);
 
         return $this->client
@@ -667,9 +667,9 @@ class BiblesApi
      *
      * @param  string $bible_id Id of Bible to be fetched (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \App\Clients\BibleClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse2001
+     * @return \App\Clients\BibleClient\Model\InlineResponse2001
      */
     public function getBible($bible_id)
     {
@@ -682,13 +682,13 @@ class BiblesApi
      *
      * @param  string $bible_id Id of Bible to be fetched (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \App\Clients\BibleClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse2001, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \App\Clients\BibleClient\Model\InlineResponse2001, HTTP status code, HTTP response headers (array of strings)
      */
     public function getBibleWithHttpInfo($bible_id)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse2001';
+        $returnType = '\App\Clients\BibleClient\Model\InlineResponse2001';
         $request = $this->getBibleRequest($bible_id);
 
         try {
@@ -740,7 +740,7 @@ class BiblesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse2001',
+                        '\App\Clients\BibleClient\Model\InlineResponse2001',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -782,7 +782,7 @@ class BiblesApi
      */
     public function getBibleAsyncWithHttpInfo($bible_id)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse2001';
+        $returnType = '\App\Clients\BibleClient\Model\InlineResponse2001';
         $request = $this->getBibleRequest($bible_id);
 
         return $this->client
@@ -941,9 +941,9 @@ class BiblesApi
      * @param  string $ids Comma separated list of Bible Ids to return (optional)
      * @param  bool $include_full_details Boolean to include full Bible details (e.g. copyright and promo info) (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \App\Clients\BibleClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse200
+     * @return \App\Clients\BibleClient\Model\InlineResponse200
      */
     public function getBibles($language = null, $abbreviation = null, $name = null, $ids = null, $include_full_details = null)
     {
@@ -960,13 +960,13 @@ class BiblesApi
      * @param  string $ids Comma separated list of Bible Ids to return (optional)
      * @param  bool $include_full_details Boolean to include full Bible details (e.g. copyright and promo info) (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \App\Clients\BibleClient\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse200, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \App\Clients\BibleClient\Model\InlineResponse200, HTTP status code, HTTP response headers (array of strings)
      */
     public function getBiblesWithHttpInfo($language = null, $abbreviation = null, $name = null, $ids = null, $include_full_details = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse200';
+        $returnType = '\App\Clients\BibleClient\Model\InlineResponse200';
         $request = $this->getBiblesRequest($language, $abbreviation, $name, $ids, $include_full_details);
 
         try {
@@ -1018,7 +1018,7 @@ class BiblesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse200',
+                        '\App\Clients\BibleClient\Model\InlineResponse200',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1068,7 +1068,7 @@ class BiblesApi
      */
     public function getBiblesAsyncWithHttpInfo($language = null, $abbreviation = null, $name = null, $ids = null, $include_full_details = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse200';
+        $returnType = '\App\Clients\BibleClient\Model\InlineResponse200';
         $request = $this->getBiblesRequest($language, $abbreviation, $name, $ids, $include_full_details);
 
         return $this->client
