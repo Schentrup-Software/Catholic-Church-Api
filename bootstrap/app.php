@@ -1,5 +1,7 @@
 <?php
 
+use App\Clients\BibleClient\Api\BiblesApi;
+
 require_once __DIR__.'/../vendor/autoload.php';
 
 (new Laravel\Lumen\Bootstrap\LoadEnvironmentVariables(
@@ -46,6 +48,13 @@ $app->singleton(
 $app->singleton(
     Illuminate\Contracts\Console\Kernel::class,
     App\Console\Kernel::class
+);
+
+$app->singleton(
+    App\Clients\BibleClient\Api\BiblesApi::class,
+    function ($app) {
+        return new BiblesApi();
+    }
 );
 
 /*

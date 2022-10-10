@@ -3,12 +3,15 @@
 namespace App\Http\Controllers;
 
 use Laravel\Lumen\Routing\Controller as BaseController;
+use App\Clients\BibleClient\Api\BiblesApi;
 
 class BibleController extends BaseController
 {
-    public function __construct()
-    {
+    private BiblesApi $biblesApi;
 
+    public function __construct(BiblesApi $biblesApi)
+    {
+        $this->biblesApi = $biblesApi;
     }
 
     /**
@@ -18,6 +21,6 @@ class BibleController extends BaseController
      */
     public function getBibles()
     {
-        return "This is a test";
+        return $this->biblesApi->getBibles();
     }
 }
