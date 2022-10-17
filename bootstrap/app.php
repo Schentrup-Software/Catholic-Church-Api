@@ -1,6 +1,7 @@
 <?php
 
 use App\Clients\BibleClient\Api\BiblesApi;
+use App\Clients\CalendarClient\Api\CalendarApi;
 use App\Clients\BibleClient\Configuration;
 
 require_once __DIR__.'/../vendor/autoload.php';
@@ -60,6 +61,13 @@ $app->singleton(
         return new BiblesApi(
             config: $config
         );
+    }
+);
+
+$app->singleton(
+    App\Clients\CalendarClient\Api\CalendarApi::class,
+    function ($app) {
+        return new CalendarApi();
     }
 );
 
