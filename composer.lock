@@ -1,0 +1,279 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "fe12ff21f17d68c5b2925f393e4ff097",
+    "packages": [
+        {
+            "name": "pmjones/auto-route",
+            "version": "2.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pmjones/AutoRoute.git",
+                "reference": "3bd60388334e11ae3f3ca8f0c65580239f466b04"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pmjones/AutoRoute/zipball/3bd60388334e11ae3f3ca8f0c65580239f466b04",
+                "reference": "3bd60388334e11ae3f3ca8f0c65580239f466b04",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^8.0",
+                "pmjones/throwable-properties": "^1.0",
+                "psr/log": "^3.0"
+            },
+            "require-dev": {
+                "pds/skeleton": "^1.0",
+                "phpstan/phpstan": "^0.12.82",
+                "phpunit/phpunit": "^9.0"
+            },
+            "bin": [
+                "bin/autoroute-dump.php"
+            ],
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "AutoRoute\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Automatically routes HTTP request to action classes.",
+            "homepage": "http://github.com/pmjones/auto-route",
+            "keywords": [
+                "action",
+                "adr",
+                "route",
+                "router",
+                "routing"
+            ],
+            "support": {
+                "issues": "https://github.com/pmjones/AutoRoute/issues",
+                "source": "https://github.com/pmjones/AutoRoute/tree/2.1.1"
+            },
+            "time": "2022-10-22T14:31:15+00:00"
+        },
+        {
+            "name": "pmjones/throwable-properties",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pmjones/throwable-properties.git",
+                "reference": "88bf20e8a450ae6bd0b9076e2a9f8e933535ad61"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pmjones/throwable-properties/zipball/88bf20e8a450ae6bd0b9076e2a9f8e933535ad61",
+                "reference": "88bf20e8a450ae6bd0b9076e2a9f8e933535ad61",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^8.0"
+            },
+            "require-dev": {
+                "pds/skeleton": "^1.0",
+                "phpstan/phpstan": "^1.0",
+                "phpunit/phpunit": "^9.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "pmjones\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Copies properties of a Throwable to a serializable object.",
+            "homepage": "http://github.com/pmjones/throwable-properties",
+            "keywords": [
+                "encode",
+                "exception",
+                "json",
+                "serialize",
+                "throwable"
+            ],
+            "support": {
+                "issues": "https://github.com/pmjones/throwable-properties/issues",
+                "source": "https://github.com/pmjones/throwable-properties/tree/1.0.0"
+            },
+            "time": "2022-10-22T02:39:51+00:00"
+        },
+        {
+            "name": "psr/log",
+            "version": "3.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/log.git",
+                "reference": "f16e1d5863e37f8d8c2a01719f5b34baa2b714d3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/log/zipball/f16e1d5863e37f8d8c2a01719f5b34baa2b714d3",
+                "reference": "f16e1d5863e37f8d8c2a01719f5b34baa2b714d3",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.0.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Log\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "https://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interface for logging libraries",
+            "homepage": "https://github.com/php-fig/log",
+            "keywords": [
+                "log",
+                "psr",
+                "psr-3"
+            ],
+            "support": {
+                "source": "https://github.com/php-fig/log/tree/3.0.2"
+            },
+            "time": "2024-09-11T13:17:53+00:00"
+        },
+        {
+            "name": "sapien/sapien",
+            "version": "1.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sapienphp/sapien.git",
+                "reference": "7477096140918978a035025e2fc5d20553b16e83"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sapienphp/sapien/zipball/7477096140918978a035025e2fc5d20553b16e83",
+                "reference": "7477096140918978a035025e2fc5d20553b16e83",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^8.1 | ^8.2 | ^8.3 | ^8.4"
+            },
+            "require-dev": {
+                "ext-xdebug": "*",
+                "pds/composer-script-names": "^1.0",
+                "pds/skeleton": "^1.0",
+                "phpstan/phpstan": "^1.0",
+                "phpunit/phpunit": "^10.0",
+                "pmjones/php-styler": "0.x-dev"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Sapien\\": "./src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "John Boehr",
+                    "email": "jbboehr@php.net",
+                    "role": "Lead"
+                },
+                {
+                    "name": "Paul M. Jones",
+                    "email": "pmjones@pmjones.io",
+                    "role": "Lead"
+                }
+            ],
+            "description": "Server API (SAPI) request and response objects for PHP.",
+            "support": {
+                "issues": "https://github.com/sapienphp/sapien/issues",
+                "source": "https://github.com/sapienphp/sapien/tree/1.1.2"
+            },
+            "time": "2025-02-03T19:53:39+00:00"
+        },
+        {
+            "name": "schentrup-software/php-api",
+            "version": "v0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Schentrup-Software/PHP-API.git",
+                "reference": "2a96607664908ebec1be55ef0d6371f4fdcc087a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Schentrup-Software/PHP-API/zipball/2a96607664908ebec1be55ef0d6371f4fdcc087a",
+                "reference": "2a96607664908ebec1be55ef0d6371f4fdcc087a",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.1",
+                "pmjones/auto-route": "^2.0",
+                "sapien/sapien": "^1.1"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^3.9",
+                "phan/phan": "^5.4",
+                "phpunit/phpunit": "8.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "PhpApi\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "joeySchentrup",
+                    "email": "joey@schentrupsoftware.com"
+                }
+            ],
+            "description": "A basic api framework for PHP. It uses classes for request and responses to make a self documenting API.",
+            "keywords": [
+                "Framewaork",
+                "api",
+                "rest"
+            ],
+            "support": {
+                "source": "https://github.com/Schentrup-Software/PHP-API/tree/v0.1.0"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/joeySchentrup",
+                    "type": "github"
+                }
+            ],
+            "time": "2025-04-21T00:27:43+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {},
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {},
+    "platform-dev": {},
+    "plugin-api-version": "2.6.0"
+}
